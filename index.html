@@ -47,8 +47,8 @@
 				<div class="clearfix"></div>
 			</div>
 
-			<div style="border-left:1px solid rgb(255, 255, 255);height:300px" class="col-md-7" id="faixa_salarial"
-				style="text-align: center;">
+			<div class="col-md-7" id="faixa_salarial"
+				style="text-align: center;border-left:1px solid rgb(255, 255, 255);height:300px">
 				<strong>FAIXAS SALARIAIS (por salário mínimo)</strong>
 				<a class="reset" href="javascript:faixa_salarialPieChart.filterAll();dc.redrawAll();"
 					style="display: none;">reset</a>
@@ -68,8 +68,8 @@
 				<div class="clearfix"></div>
 			</div>
 
-			<div style="border-left:1px solid rgb(255, 255, 255);height:300px" class="col-md-6" id="situacao_trabalho"
-				style="text-align: center;">
+			<div class="col-md-6" id="situacao_trabalho"
+				style="text-align: center;border-left:1px solid rgb(255, 255, 255);height:300px">
 				<strong>SITUAÇÃO DE TRABALHO (área de atuação)</strong>
 				<a class="reset" href="javascript:situacao_trabalhoPieChart.filterAll();dc.redrawAll();"
 					style="display: none;">reset</a>
@@ -180,6 +180,7 @@
 			.xAxisLabel('Semestre')
 			.yAxisLabel('Quantidade de Alunos')
 			.dimension(semestreValue)
+			.renderHorizontalGridLines(true)
 			.barPadding(0.1)
 			.outerPadding(0.05)
 			.group(semestreValueGroupCount);

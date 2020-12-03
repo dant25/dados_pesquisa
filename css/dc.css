@@ -12,8 +12,9 @@
   stroke: none;
   fill: #ccc; }
 
+
 .dc-chart .pie-slice {
-  fill: #fff;
+  fill: #000;
   font-size: 12px;
   cursor: pointer; }
   .dc-chart .pie-slice.external {
@@ -22,7 +23,6 @@
     fill-opacity: .8; }
   :hover .dc-chart .pie-slice.highlight {
     fill-opacity: .8; }
-
 .dc-chart .pie-path {
   fill: none;
   stroke-width: 2px;
