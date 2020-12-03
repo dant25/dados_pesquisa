@@ -30,25 +30,26 @@
 
 </head>
 
-<body style="background-color:rgb(178, 173, 206);">
+<body style="background-color:rgb(180, 180, 180);">
 	<div class="container">
 		<!--==============================Corpo================================-->
-		<h2 style="text-align: center;">Graficos e Estatisticas - SI Unichristus</h2>
+		<h2 style="text-align: center;">CURSO DE SISTEMAS DE INFORMAÇÃO (UNICHRISTUS) - RESULTADOS</h2>
 
 		<hr style="margin: 40px;">
 
 		<div class='row'>
 
-			<div class="col-md-4" id="semestre" style="text-align: center;">
-				<strong>Alunos por Semetre</strong>
-				<a class="reset" href="javascript:semestreRowChart.filterAll();dc.redrawAll();"
+			<div class="col-md-5" id="semestre" style="text-align: center;">
+				<strong>ALUNOS POR SEMESTRE</strong>
+				<a class="reset" href="javascript:semestreBarChart.filterAll();dc.redrawAll();"
 					style="display: none;">reset</a>
 
 				<div class="clearfix"></div>
 			</div>
 
-			<div class="col-md-8" id="faixa_salarial" style="text-align: center;">
-				<strong>Faixas Salariais</strong>
+			<div style="border-left:1px solid rgb(255, 255, 255);height:300px" class="col-md-7" id="faixa_salarial"
+				style="text-align: center;">
+				<strong>FAIXAS SALARIAIS (por salário mínimo)</strong>
 				<a class="reset" href="javascript:faixa_salarialPieChart.filterAll();dc.redrawAll();"
 					style="display: none;">reset</a>
 
@@ -60,15 +61,16 @@
 
 		<div class='row'>
 			<div class="col-md-6" id="faixa_Idade" style="text-align: center;">
-				<strong>Faixas de Idade</strong>
+				<strong>FAIXAS DE IDADE</strong>
 				<a class="reset" href="javascript:faixa_IdadePieChart.filterAll();dc.redrawAll();"
 					style="display: none;">reset</a>
 
 				<div class="clearfix"></div>
 			</div>
 
-			<div class="col-md-6" id="situacao_trabalho" style="text-align: center;">
-				<strong>Situação de Trabalho</strong>
+			<div style="border-left:1px solid rgb(255, 255, 255);height:300px" class="col-md-6" id="situacao_trabalho"
+				style="text-align: center;">
+				<strong>SITUAÇÃO DE TRABALHO (área de atuação)</strong>
 				<a class="reset" href="javascript:situacao_trabalhoPieChart.filterAll();dc.redrawAll();"
 					style="display: none;">reset</a>
 
@@ -170,8 +172,8 @@
 		//----------------------------------------------    
 
 		semestreBarChart
-			//  .width(768)
-			 .height(300)
+			// .width(500)
+			.height(300)
 			.x(d3.scaleBand())
 			.xUnits(dc.units.ordinal)
 			.brushOn(false)
@@ -183,8 +185,8 @@
 			.group(semestreValueGroupCount);
 
 		faixa_salarialPieChart
-			 .width(768)
-			 .height(300)
+			.width(768)
+			.height(300)
 			.slicesCap(4)
 			.innerRadius(50)
 			.dimension(faixa_salarialValue)
@@ -213,8 +215,8 @@
 			});
 
 		situacao_trabalhoPieChart
-			 .width(768)
-			 .height(300)
+			.width(768)
+			.height(300)
 			.slicesCap(4)
 			.innerRadius(50)
 			.dimension(situacao_trabalhoValue)
